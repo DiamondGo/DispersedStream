@@ -1,5 +1,6 @@
 package club.antigfw.network.basic.surelink
 
+import com.backblaze.erasure.ReedSolomon
 import kotlinx.coroutines.experimental.launch
 import kotlinx.coroutines.experimental.runBlocking
 import org.junit.Assert
