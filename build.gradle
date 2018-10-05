@@ -68,6 +68,9 @@ dependencies {
 
     //compile 'com.github.Username:Reponame:Tag
     compile 'com.github.Backblaze:JavaReedSolomon:master-SNAPSHOT'
+
+    // commons
+    compile 'com.github.DiamondGo:commons:master-SNAPSHOT'
 }
 
 compileKotlin {
