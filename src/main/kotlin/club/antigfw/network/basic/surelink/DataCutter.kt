@@ -1,6 +1,6 @@
 package club.antigfw.network.basic.surelink
 
-import kotlinx.coroutines.experimental.channels.Channel
+import kotlinx.coroutines.channels.Channel
 import java.nio.ByteBuffer
 import kotlin.math.min
 

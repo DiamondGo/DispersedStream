@@ -1,8 +1,9 @@
 package club.antigfw.network.basic.surelink
 
 import com.backblaze.erasure.ReedSolomon
-import kotlinx.coroutines.experimental.launch
-import kotlinx.coroutines.experimental.runBlocking
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import org.junit.Assert
 import org.junit.BeforeClass
 import org.junit.Test
@@ -23,7 +24,7 @@ class DataCutterTest {
         println("blockSize is $blockSize")
         val cutter = DataCutter(blockSize)
 
-        val send = launch {
+        val send = GlobalScope.launch {
             var sent = 0
             (0..10000).map { rand.nextInt(10000) + 1 }.forEach {
                 val bytes = ByteArray(it) { ((sent + it) % 256).toByte() }
@@ -33,7 +34,7 @@ class DataCutterTest {
             cutter.close()
         }
 
-        val recv = launch {
+        val recv = GlobalScope.launch {
             var recvd = 0
             var lastSize = -1
             while (true) {
