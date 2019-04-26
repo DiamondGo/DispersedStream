@@ -1,7 +1,6 @@
-
 buildscript {
     ext.kotlin_version = '1.3.0'
-    ext.dagger_version = '2.16'
+    ext.dagger_version = '2.17'
 
     repositories {
         mavenCentral()
@@ -73,11 +72,11 @@ dependencies {
 }
 
 compileKotlin {
-    kotlinOptions.jvmTarget = "1.6"
+    kotlinOptions.jvmTarget = "1.8"
 }
 
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.6"
+    kotlinOptions.jvmTarget = "1.8"
 }
 
 sourceSets {
